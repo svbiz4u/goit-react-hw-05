@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-
-
 axios.defaults.baseURL = "https://api.themoviedb.org/3/";
 
 axios.defaults.headers.common["Authorization"] =
@@ -19,7 +17,7 @@ export const fetchMovieById = async (movieId) => {
 
 export const fetchMovieSearch = async (query) => {
   const { data } = await axios.get(`search/movie`, {
-    params: { query },
+  params: { query },
   });
   return data;
 };

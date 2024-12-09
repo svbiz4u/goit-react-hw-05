@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import s from './MovieCast.module.css'
 import { fetchMovieCreditById } from "../../services/api";
 
-
-
 const MovieCast = () => {
     const { movieId } = useParams();
     const [actors, setActors] = useState([]);
@@ -39,8 +37,8 @@ const MovieCast = () => {
                   width={250}
                   alt={actor.name} />
                 <div className={s.title_wrap}>
-                  <p>{actor.name}</p>
-            <p>Character: {actor.character}</p>
+                    <p>{actor.name}</p>
+                    <p>Character: {actor.character}</p>
                 </div>
               
               </div>

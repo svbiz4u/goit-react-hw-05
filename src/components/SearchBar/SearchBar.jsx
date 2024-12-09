@@ -10,10 +10,9 @@ const SearchBar = ({handleChangeQuery}) => {
 
   return (
     <div>
-          <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
               <Form>
-                  <Field name='query' >
-                      
+                  <Field name='query' >   
                   </Field>
                   <button type="submit">Search</button>
               </Form>

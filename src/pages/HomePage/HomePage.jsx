@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchMoviesPop } from "../../services/api";
 import MovieList from "../../components/MovieList/MovieList";
 
-
 const HomePage = () => {
-
     const [movies, setMovies] = useState([]);
         
         useEffect(() => {
@@ -13,8 +11,7 @@ const HomePage = () => {
                 setMovies(data);
             };
             getMoviesPop();
-        }, []);
-            
+        }, []);     
     
       return (
         <div>

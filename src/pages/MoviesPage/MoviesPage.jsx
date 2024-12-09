@@ -17,7 +17,7 @@ const MoviesPage = () => {
     
   
     useEffect(() => {
-      const getMoviesSearch = async () => {
+        const getMoviesSearch = async () => {
         const data = await fetchMovieSearch(query);
         setMovies(data.results);
       };

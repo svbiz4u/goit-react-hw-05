@@ -15,21 +15,17 @@ const App = () => {
   return (
     <div>
       <Navigation />
-
       <Suspense fallback={<h2>Loading...</h2>}>
         <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/movies' element={<MoviesPage />} />
-        <Route path='/movies/:movieId' element={<MovieDetailsPage />} >
+          <Route path='/' element={<HomePage />} />
+          <Route path='/movies' element={<MoviesPage />} />
+          <Route path='/movies/:movieId' element={<MovieDetailsPage />} >
           <Route path="cast" element={<MovieCast />} />
           <Route path="reviews" element={<MovieReviews />} />
           </Route >
-        
-        <Route path='*' element={<NotFoundPage />} />
-      </Routes>
-</Suspense>
-
-      
+          <Route path='*' element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
     </div>
   )
 }
